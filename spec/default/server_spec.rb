@@ -1,6 +1,5 @@
-require 'serverspec'
-require 'pathname'
-require 'net/ssh'
+require_relative '../spec_helper'
+
 
 include SpecInfra::Helper::Ssh
 include SpecInfra::Helper::DetectOS
@@ -27,12 +26,16 @@ describe package('nginx') do
 end
 
 describe service('nginx') do
-    it { should be_enabled }
+  it { should be_enabled }
+  it { should be_running   }
+end
+
+describe port(80) do
+  it { should be_listening }
 end
 
 describe command('curl -s http://localhost:80/') do
   it { should return_stdout(%r{<center><h1>Welcome to nginx!</h1></center>})}
-
 end
 
 describe port(80) do
