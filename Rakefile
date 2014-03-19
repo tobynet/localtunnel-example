@@ -6,3 +6,9 @@ RSpec::Core::RakeTask.new(:spec) do |t|
 end
 
 task :default => :spec
+
+desc 'Test of running localtunnel'
+task :test_tunnel do
+  sh('vagrant ssh -c "lt --port 80"')
+end
+
