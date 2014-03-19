@@ -8,6 +8,10 @@ sudo apt-get -qyy update > /dev/null
 sudo apt-get -y dist-upgrade
 sudo apt-get -y install git-core build-essential
 
+# Setup firewall
+sudo ufw allow ssh
+sudo ufw enable
+
 #Too old...
 # sudo apt-get -y install nodejs npm
 # npm config set ca=""

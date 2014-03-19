@@ -4,6 +4,19 @@ require_relative '../spec_helper'
 include SpecInfra::Helper::Ssh
 include SpecInfra::Helper::DetectOS
 
+describe package('ufw') do
+  it { should be_installed }
+end
+
+describe service('ufw') do
+  it { should be_enabled }
+  it { should be_running }
+end
+
+describe port('22') do
+  it { should be_listening }
+end
+
 describe package('nodejs') do
   it { should be_installed }
 end
