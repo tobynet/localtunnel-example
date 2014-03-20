@@ -7,12 +7,14 @@ via [defunctzombie/localtunnel](https://github.com/defunctzombie/localtunnel)
 ## Requirements
 
 * [Vagrant](http://www.vagrantup.com/) 1.4 or lator
+    * [vagrant-serverspec plugin](https://github.com/jvoorhis/vagrant-serverspec)
 * [VirtualBox](https://www.virtualbox.org/) 4.3.x or lator
 * [Ruby](https://www.ruby-lang.org/) 1.9 or lator
 
 ## Instllations and getting started
 
 ```bash
+~/tmp$ vagrant plugin install vagrant-serverspec
 ~/tmp$ git clone https://github.com/toooooooby/localtunnel-example.git && cd localtunnel-example
 ~/tmp/localtunnel-example$ bundle install
 ~/tmp/localtunnel-example$ vagrant up
