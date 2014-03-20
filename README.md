@@ -1,22 +1,26 @@
-# An examle of [localtunnel](https://github.com/defunctzombie/localtunnel)
+# An example of [localtunnel](https://github.com/defunctzombie/localtunnel)
+
+> localtunnel exposes your localhost to the world for easy testing and sharing! No need to mess with DNS or deploy just to have others test out your changes.  
+
+via [defunctzombie/localtunnel](https://github.com/defunctzombie/localtunnel)
 
 ## Requirements
 
-* Vagrant
-* VirtualBox
-* Ruby 1.9 or below
+* [Vagrant](http://www.vagrantup.com/) 1.4 or lator
+* [VirtualBox](https://www.virtualbox.org/) 4.3.x or lator
+* [Ruby](https://www.ruby-lang.org/) 1.9 or lator
 
 ## Instllations and getting started
 
 ```bash
-$ git clone https://github.com/toooooooby/localtunnel-examle.git && cd localtunnel-examle
-$ bundle install
-$ vagrant up
+~/tmp$ git clone https://github.com/toooooooby/localtunnel-example.git && cd localtunnel-example
+~/tmp/localtunnel-example$ bundle install
+~/tmp/localtunnel-example$ vagrant up
   :
-$ rake test_tunnel
+~/tmp/localtunnel-example$ rake test_tunnel
 vagrant ssh -c "lt --port 80"
 your url is: https://xxxxxxxxx.localtunnel.me
-$ # open https://xxxxxxxxx.localtunnel.me
+~/tmp/localtunnel-example$ # open https://xxxxxxxxx.localtunnel.me
 (Stop to CTRL-C)
 ```
 
